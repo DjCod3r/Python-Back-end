@@ -19,3 +19,5 @@ print(f'{b:0^10}')
 
 nome = 'Djonatan'
 print(f'{nome:#^10}')
+nome = nome.ljust(10, '#')
+print(nome)
