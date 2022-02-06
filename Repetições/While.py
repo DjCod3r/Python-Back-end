@@ -15,7 +15,16 @@ while x < 10:
         j += 1
     x += 1
 
-
+frase = 'teste de iteracao com while'
+tamanho = len(frase)
+contagem = 0
+string = ''
+while contagem < tamanho:
+    print(string)
+    print(contagem, frase[contagem])
+    string += frase[contagem]
+    contagem += 1
+print(string)
 
 
 
