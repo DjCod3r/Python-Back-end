@@ -1,2 +1,1 @@
-# PythonScripts
- PythonScripts
+Estudos da Linguagem Python pura
