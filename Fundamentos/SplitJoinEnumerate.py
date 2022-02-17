@@ -9,5 +9,5 @@ juntarLista = ' '.join(lista) #juntando lista
 print(juntarLista)
 
 
-for indice , valor in enumerate(lista): 
+for indice , valor in enumerate(lista):
     print(indice , valor)
