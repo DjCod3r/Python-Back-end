@@ -20,3 +20,10 @@ print(a)
 l5 = ['Djonatan', 'Schvambach', 'Python', 'Java', 'C++']
 
 print([ valor.replace('a', '@') for valor in l5])
+
+
+
+#utilizar com Dictionary
+dictD1 = {'nome': 'Djonatan', 'sobrenome': 'Schvambach', 'idade': 25, 'altura': 1.76, 'peso': 58}
+
+print({x: y for x, y in dictD1.items()})
