@@ -7,6 +7,23 @@ from Dados import pessoas, produtos, lista
 #print(list(novaLista))
 
 
-precos = map(lambda p: p['preco'], produtos ) 
-for preco in precos:
+for p in produtos:
+    print(p)
+print()
+print("#####################################")
+print()
+print("Produtos com precos aumentados:")
+print()
+
+def aumento(p):
+    p['preco'] = round(p['preco'] * 1.1, 2)
+    return p
+
+
+Novosprecos = map(aumento, produtos ) 
+for preco in Novosprecos:
     print(preco)
+
+
+
+
