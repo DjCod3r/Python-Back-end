@@ -3,21 +3,21 @@ from datetime import datetime
 
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-from email.mime.image import MIMEImage
+#from email.mime.image import MIMEImage
 import smtplib
 
-meu_email = 'SEUEMAIL@GMAIL.COM'
-minha_senha = 'SUASENHA'
+meu_email = 'colocar seu-email'
+minha_senha = 'colocar senha de app'
 
 with open('template.html', 'r') as html:
     template = Template(html.read())
     data_atual = datetime.now().strftime('%d/%m/%Y')
-    corpo_msg = template.substitute(nome='Luiz Otávio', data=data_atual)
+    corpo_msg = template.substitute(nome='dados da mensagem', data=data_atual)
 
 msg = MIMEMultipart()
-msg['from'] = 'SEU NOME'
-msg['to'] = 'EMAILDOCLIENTE@GMAIL.COM'  # Cliente
-msg['subject'] = 'ASSUNTO DO E-MAIL'
+msg['from'] = 'seu nome'
+msg['to'] = 'email-do destinatário'  # Cliente
+msg['subject'] = 'assunto'
 
 corpo = MIMEText(corpo_msg, 'html')
 msg.attach(corpo)
