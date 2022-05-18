@@ -11,6 +11,8 @@ a1.estudar()
 print(a1.nome)
 
 
-c2 = ClienteVIP('Maria', 34)
+c2 = ClienteVIP('Maria', 34, 'Silva')
 c2.comprar()
 c2.falar()
+
+
