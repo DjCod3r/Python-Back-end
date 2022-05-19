@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  
+  
+/* Center the loader */
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+    .w3-row-padding img {margin-bottom: 12px}
+    /* Set the width of the sidebar to 120px */
+    .w3-sidebar {width: 120px;background: #222;}
+    /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+  
+    /* Remove margins from "page content" on small screens */
+    @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+.colorblue{
+    color: white;
+}
+#loader {
+	
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid white;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+#loaderBack{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  width: 170px;
+  height: 170px;
+  margin: -100px 0 0 -100px;
+  border: 16px solid black;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  -webkit-animation: spinback 2s linear infinite;
+  animation: spinback 2s linear infinite;
+}
+@-webkit-keyframes spinback {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(-360deg); }
+}
+@keyframes spinback {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+	
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+#myCont{
+  position:absolute;
+  margin-top:100px;
+  width:63%;
+  left:50%;
+
+}
+#myDiv {
+	
+  display: none;
+  text-align: center;
+}
+</style>
+</head>
+<body onload="myFunction()" style="margin:0;background-color:black;">
+ 
+
+  <div id="myCont" class="w3-white w3-round-xlarge w3-display-middle">
+    
+    <div id="myBar" class="w3-container w3-blue w3-round-xlarge" style="width:0%;text-align:center;">0%</div>
+  </div>
+
+<div> 
+ 
+<div id="loader"></div>
+<div id="loaderBack"></div>
+
+</div>
+<div class="w3-display-container w3-display-bottommiddle">
+ <h1  id="Welcome" style="color:white;text-align:center;font-family:Montserrat", sans-serif" ><span class="w3-hide-small"></span>Loading...</h1>
+</div> 
+ 
+
+<div style="display:none;" id="myDiv" class="animate-bottom">
+
+  <!-- Icon Bar (Sidebar - hidden on small screens) -->
+
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top " id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">INICIO</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">SOBRE</a>
+    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PROJETOS</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTATO</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small"></span> Djonatan Schvambach.</h1>
+
+    <p>Analista de Business Intelligence e Dados.</p>
+
+   
+  </header>
+
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+    <h2 class="w3-text-light-grey">Sobre</h2>
+    <hr style="width:200px" class="w3-opacity">
+    
+    <h3 style="color:#3498db" class="w3-padding-16">Hard Skills</h3>
+    <p class="w3-wide colorblue">Power BI</p>
+    <div class="w3-light-grey w3-round-xlarge">
+        <div  class="w3-container w3-round-xlarge w3-blue" style="width:75%;text-align:right;">75%</div>
+      </div>
+    <p class="w3-wide colorblue">Tableau</p>
+    <div class="w3-light-grey w3-round-xlarge">
+        <div  class="w3-container w3-round-xlarge w3-blue" style="width:45%;text-align:right;">45%</div>
+      </div>
+      <p class="w3-wide colorblue">SQL</p>
+      <div class="w3-light-grey w3-round-xlarge">
+        <div  class="w3-container w3-round-xlarge w3-blue" style="width:65%;text-align:right;">65%</div>
+      </div>
+        <p class="w3-wide colorblue">SQL SERVER</p>
+        <div class="w3-light-grey w3-round-xlarge">
+            <div  class="w3-container w3-round-xlarge w3-blue" style="width:55%;text-align:right;">55%</div>
+          </div>
+        <p class="w3-wide colorblue">Python</p>
+        <div class="w3-light-grey w3-round-xlarge">
+            <div  class="w3-container w3-round-xlarge w3-blue" style="width:55%;text-align:right;">55%</div>
+          </div>
+        <p class="w3-wide colorblue">Excel</p>
+        <div class="w3-light-grey w3-round-xlarge">
+            <div  class="w3-container w3-round-xlarge w3-blue" style="width:80%;text-align:right;">80%</div>
+          </div>
+        <p class="w3-wide colorblue">R</p>
+        <div class="w3-light-grey w3-round-xlarge">
+            <div  class="w3-container w3-round-xlarge w3-blue" style="width:20%;text-align:right;">20%</div>
+          </div>
+        <p class="w3-wide colorblue">Azure e Google Cloud</p>
+        <div class="w3-light-grey w3-round-xlarge">
+            <div  class="w3-container w3-round-xlarge w3-blue" style="width:20%;text-align:right;">20%</div>
+          </div>
+    </div><br>
+    
+    <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">?</span><br>
+        Clientes
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">10+</span><br>
+        Projetos Acabados
+      </div>
+    </div>
+
+    
+  
+  <!-- Portfolio Section -->
+  <div class="w3-padding-64 w3-content" id="photos">
+    <h2 class="w3-text-light-grey">Projetos</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <!-- Grid for photos -->
+    <div> </div>
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half">
+        <iframe title="AnalyticsG" width="720" height="423.5" src="https://app.powerbi.com/view?r=eyJrIjoiY2JkYjIzYjUtM2I3Ni00ZmQ0LTg4ZDQtYzFkZGE4MzljNGZlIiwidCI6IjEwYjZhY2M3LWNjYjMtNDBlNS04MjI3LTE5ZjI1OTgwMjE5NCJ9&embedImagePlaceholder=true&pageName=ReportSection" frameborder="0" allowFullScreen="true"></iframe>
+  
+      </div>
+
+      <div class="w3-half">
+        
+      </div>
+    <!-- End photo grid -->
+    </div>
+  <!-- End Portfolio Section -->
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+    <h2 class="w3-text-light-grey">Entre em Contato</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Brasil, RS</p>
+      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Whats: (51) 98942-4357</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email:Djonatanschvambach@gmail.com</p>
+    </div><br>
+   
+  <!-- End Contact Section -->
+  </div>
+  
+<!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+<footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+  <a class="fa fa-instagram w3-hover-opacity" href="'https://www.instagram.com/djonatan_schvambach/" target="_blank"></a>
+  <a class='fa fa-github w3-hover-opacity' href= "https://github.com/DjCod3r" target="_blank" ></a>
+  <a class="fa fa-twitter w3-hover-opacity" href="https://www.linkedin.com/in/djonatan-schvambach-25a2051bb/" target="_blank" ></a>
+  <a class="fa fa-linkedin w3-hover-opacity" href="https://www.linkedin.com/in/djonatan-schvambach-25a2051bb/" target="_blank" ></a>
+
+ <!-- End footer -->
+</footer>
+
+<!-- END PAGE CONTENT -->
+</div>
+</div>
+
+<script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+  var elem = document.getElementById("myBar");   
+  var width = 0;
+  var id = setInterval(frame, 30);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+      elem.innerHTML = width * 1  + '%';
+    }
+  }
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+  document.getElementById("myBar").style.display = "none";
+  document.getElementById("myCont").style.display = "none";
+  document.getElementById("loaderBack").style.display = "none";
+  document.getElementById("Welcome").style.display = "none";
+}
+
+function move() {
+  var elem = document.getElementById("myBar");   
+  var width = 0;
+  var id = setInterval(frame, 30);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+      elem.innerHTML = width * 1  + '%';
+    }
+  }
+}
+</script>
+
+</body>
+</html>
