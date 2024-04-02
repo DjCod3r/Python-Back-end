@@ -16,14 +16,18 @@ alunos = [
 
 ]
 
-#funcão que ordena a lista de alunos
-ordena = lambda aluno: aluno['nota']
 
-#ordenar
-alunos.sort(key=ordena)
+#recebendo as notas
+notas = lambda aluno: aluno['nota']
+
+#verificar as notas
+for  nota in notas:
+    print(nota)
+
+alunos.sort(key=notas)
 
 #agrupar os alunos por nota
-groupByNote = groupby(alunos, ordena)
+groupByNote = groupby(alunos, notas)
 
 #imprimir os alunos por nota
 for agrupamento , valoresAgrupados in groupByNote:
